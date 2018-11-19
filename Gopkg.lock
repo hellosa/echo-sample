@@ -2,6 +2,23 @@
 
 
 [[projects]]
+  digest = "1:34a9a60fade37f8009ed4a19e02924198aba3eabfcc120ee5c6002b7de17212d"
+  name = "github.com/go-redis/redis"
+  packages = [
+    ".",
+    "internal",
+    "internal/consistenthash",
+    "internal/hashtag",
+    "internal/pool",
+    "internal/proto",
+    "internal/singleflight",
+    "internal/util",
+  ]
+  pruneopts = "UT"
+  revision = "b3d9bf10f6666b2ee5100a6f3f84f4caf3b4e37d"
+  version = "v6.14.2"
+
+[[projects]]
   digest = "1:f992df6c97ba40d3643a5fbdf1d33497d1f43f84aa9567f7beb96c1472d74584"
   name = "github.com/labstack/echo"
   packages = ["."]
@@ -74,6 +91,9 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/labstack/echo"]
+  input-imports = [
+    "github.com/go-redis/redis",
+    "github.com/labstack/echo",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

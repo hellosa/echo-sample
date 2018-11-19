@@ -1,15 +1,16 @@
 package main
 
 import (
-	"net/http"
-
-	"github.com/labstack/echo"
+	"data-service/app"
+	"data-service/db/redis"
+	"data-service/handler"
 )
 
 func main() {
-	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
-	e.Logger.Fatal(e.Start(":1323"))
+	app.Init()
+	redis.Init()
+
+	app.Server.GET("/", handler.HelloWorldRequest)
+
+	app.Server.Logger.Fatal(app.Server.Start("127.0.0.1:1323"))
 }
