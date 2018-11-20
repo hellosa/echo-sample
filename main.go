@@ -1,9 +1,9 @@
 package main
 
 import (
-	"data-service/app"
-	"data-service/db/redis"
-	"data-service/handler"
+	"echo-sample/app"
+	"echo-sample/db/redis"
+	"echo-sample/handler"
 )
 
 func main() {

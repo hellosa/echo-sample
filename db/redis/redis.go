@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-redis/redis"
 
-	"data-service/conf"
+	"echo-sample/conf"
 )
 
 var RedisClient *redis.Client
